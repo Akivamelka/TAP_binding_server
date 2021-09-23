@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: "Lucida Sans Unicode",sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('home')}}" style="font-size:20px;color:white">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('example')}}" style="font-size:20px;color:white">Example <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('help')}}" style="font-size:20px;color:white">Help <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('about')}}" style="font-size:20px;color:white">About <span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+<h1 style="text-align:center;font-size: 35px;color: #6E7376;font-weight: bold">TAP binding calculator</h1>
+<br>
+
+<form id="my-form" action="" method=post enctype=multipart/form-data>
+    <div style="background-color: #e1e0dc; width: 90%;margin:0 auto; height: 450px; border-radius: 8px">
+        <br><br>
+        <div style="width:700px;margin:0 auto">
+            <a style="color: #414141;font-size: 20px;margin-left: 120px;font-weight: bold">Upload File:<br><br>
+                <input type=file name=the_file style="font-size: 20px;margin-left: 120px"><br><br></a>
+            <div style="color: #414141;font-size: 20px;margin-left: 120px;font-weight: bold">
+                <label for="peptide_seq">Peptide sequence:</label>
+                <input type="text" id="peptide_seq" name="peptide_seq" value="{{peptide_seq}}">
+            </div>
+            <hr style="border-top: 2px dotted #1D2731"><br>
+            <button type="submit" form="my-form" name="submit_btn" value="Results"
+                    style="font-size: 20px;background-color:#006494;color:#EFEFEF;padding: 10px 15px;
+                    border-radius: 7px;height: 60px;width: 180px;margin-left: 230px">
+                Results
+            </button><br><br>
+            {% if peptide_seq %}
+            <div style="text-align: center">
+                <a>{{new_peptide_seq}}</a><br><br>
+            </div>
+            {% endif %}
+            {% if results %}
+            <p><a style="margin-left: 205px;font-size: 20px" href="{{url_for('download_output')}}" target="_blank">Download the results file</a></p>
+            {% endif %}
+            {% if error_message %}
+            <a style="color: #b61717;margin-left: 140px;font-size: 20px">The peptide or file is not with right format.<br></a>
+            <a style="color: #b61717;margin-left: 140px;font-size: 20px">Please refer to Example.</a>
+            {% endif %}
+        </div>
+
+
+    </div>
+</form>
+
+<br><br><br><br>
+<p style="text-align: center; font-size: 16px"><b>Produced by:</b> Akiva Bruno Melka and Yoram Louzoun (2021).<br></p>
+    <p style="text-align: center; font-size: 14px">Contact us: bruno.melka@gmail.com, louzouy@math.biu.ac.il<br></p>
+<hr style="background-color: #5e5e5e">
+<p style="text-align:center; font-size:15px">&copy; Louzoun-Lab 2021</p>
+
+
+</body>
+
+</html>

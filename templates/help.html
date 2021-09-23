@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Help Page</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: "Lucida Sans Unicode", sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('home')}}" style="font-size:20px;color:white">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('example')}}" style="font-size:20px;color:white">Example <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('help')}}" style="font-size:20px;color:white">Help <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('about')}}" style="font-size:20px;color:white">About <span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<h1 style="padding-left: 40px;font-size: 30px;color: #6E7376;font-weight: bold">Help</h1><br>
+
+<p style="padding-left: 40px;font-size: 16px">
+    The purpose of this website is to compute the binding properties of a peptide using a Feed Forward Neural Network model.<br>
+    The "concentration refers to the IC50 value, the concentration of an inhibitor where the binding is reduced by half.<br>
+    The "probability" refers to the probability of presentation of the peptide by the MHC system at the surface of the cell. <br><br>
+
+    <b>Input:</b><br>
+    The input can be a single peptide or a csv file. Its details appear in the "Example" section.<br><br>
+
+    <b>Output:</b><br>
+    The model returns the "concentration" and the "probability" for each peptide. If the input is a csv file, a csv file with the results can be downloaded.<br>
+</p>
+
+</body>
+
+</html>

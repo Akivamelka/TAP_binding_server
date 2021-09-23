@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>About Page</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: "Lucida Sans Unicode", sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('home')}}" style="font-size:20px;color:white">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('example')}}" style="font-size:20px;color:white">Example <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('help')}}" style="font-size:20px;color:white">Help <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('about')}}" style="font-size:20px;color:white">About <span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+<h1 style="padding-left: 40px;font-size: 30px;color: #6E7376;font-weight: bold">About</h1><br>
+<p style="padding-left: 40px;font-size: 16px">
+    This website is developed by Akiva Bruno Melka with the help of Tom Bekor and Tzuriah Hansbacher under the supervision of Pr. Yoram Louzoun in the Louzoun lab.<br><br>
+    <a href="http://yolo.math.biu.ac.il/" target="_blank">Link for the lab website</a><br>
+    <a href="https://github.com/louzounlab" target="_blank">Link for the lab GitHub</a>
+</p>
+
+
+</body>
+
+</html>
